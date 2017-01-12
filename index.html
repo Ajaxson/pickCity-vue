@@ -45,35 +45,37 @@
 	<script type="text/javascript">
 		vm = new Vue({
 		    el: "#data-fixed",
-		    template: `
-		    		<div class="data-fixed" id="data-fixed">
-				    	<div class="rebox">
-							<div class="qury-tit">
-								<p>请选择</p>
-								<span class="ico_datasure">确定</span>
-							</div>
-							<div class="demobox">
-								<div class="col-province picker-box">
-									<div class="picker-view">
-										<div class="picker-item" tips="省份" v-for="p in province" :attr-value="p.name">{{ p.name }}</div>
-									</div>
-								</div>
-								<div class="col-city picker-box">
-									<div class="picker-view">
-										<div class="picker-item" tips="城市" v-for="ci in city" attr-value="ci.name">{{ ci.name }}</div>
-									</div>
-								</div>
-								<div class="col-county picker-box">
-									<div class="picker-view">
-										<div class="picker-item" tips="区、县" attr-value="co.name"  v-for="co in county">{{ co.name }}</div>
-									</div>
-								</div>
-								<div class="hightline"></div>
-							</div>
-						</div>
-					</div>
-				`
+		    template: '<div class="data-fixed" id="data-fixed"><div class="rebox"><div class="qury-tit"><p>请选择</p><span class="ico_datasure">确定</span></div><div class="demobox"><div class="col-province picker-box"><div class="picker-view"><div class="picker-item" tips="省份" v-for="p in province" :attr-value="p.name">{{ p.name }}</div></div></div><div class="col-city picker-box"><div class="picker-view"><div class="picker-item" tips="城市" v-for="ci in city" attr-value="ci.name">{{ ci.name }}</div></div></div><div class="col-county picker-box"><div class="picker-view"><div class="picker-item" tips="区、县" attr-value="co.name"  v-for="co in county">{{ co.name }}</div></div></div><div class="hightline"></div></div></div></div>'
 		    ,
+// 		    template: `
+// 		    		<div class="data-fixed" id="data-fixed">
+// 				    	<div class="rebox">
+// 							<div class="qury-tit">
+// 								<p>请选择</p>
+// 								<span class="ico_datasure">确定</span>
+// 							</div>
+// 							<div class="demobox">
+// 								<div class="col-province picker-box">
+// 									<div class="picker-view">
+// 										<div class="picker-item" tips="省份" v-for="p in province" :attr-value="p.name">{{ p.name }}</div>
+// 									</div>
+// 								</div>
+// 								<div class="col-city picker-box">
+// 									<div class="picker-view">
+// 										<div class="picker-item" tips="城市" v-for="ci in city" attr-value="ci.name">{{ ci.name }}</div>
+// 									</div>
+// 								</div>
+// 								<div class="col-county picker-box">
+// 									<div class="picker-view">
+// 										<div class="picker-item" tips="区、县" attr-value="co.name"  v-for="co in county">{{ co.name }}</div>
+// 									</div>
+// 								</div>
+// 								<div class="hightline"></div>
+// 							</div>
+// 						</div>
+// 					</div>
+// 				`
+// 		    ,
 		    data: function(){
 		    	return {
 		    		province: country_Json,
